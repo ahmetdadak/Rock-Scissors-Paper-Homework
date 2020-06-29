@@ -48,11 +48,11 @@ flutter:
   # assets folder and give the path of the images like below
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/rock.jpeg
-  #   - images/paper.jpeg
-  #   - images/scissors.jpeg
-
+  assets:
+    - assests/paper--left.png
+    - assests/rock--left.png
+    - assests/scissors--left.png
+    - assests/all.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

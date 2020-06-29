@@ -13,11 +13,17 @@ class MoveAnimation extends StatefulWidget {
 class _MoveAnimationState extends State<MoveAnimation> {
   Timer timer;
   MoveModel move;
-
+  int animationMs;
   _MoveAnimationState(){
     move = MoveModel.random();
     // TODO: Set timer to call setState(() => move = move.getNextMove()); }
     // every x miliseconds
+    animationMs= 50;
+    timer = Timer.periodic(
+        Duration(milliseconds: animationMs),
+        (timer) { setState(() => move = move.getNextMove()); }
+      );
+
   }
 
   @override
