@@ -24,11 +24,11 @@ class _ComputerSelectionState extends State<ComputerSelection> {
   final StartController animationController;
 
   Future<MoveModel> animation;
-  
+
   _ComputerSelectionState(this.onSelected, this.controller, this.animationController) {
     this.animationController.addListener(() => startAnimation());
   }
-  
+
   void startAnimation(){
     setState(() => {
         animation = Future.delayed(
@@ -41,8 +41,8 @@ class _ComputerSelectionState extends State<ComputerSelection> {
 
   @override
   Widget build(BuildContext context) {
-    return animation == null ? 
-      Text("Play!") :
+    return animation == null ?
+      Image(image: AssetImage('assests/all.png'), height: 120, width: 120,) :
       FutureBuilder(
         key: UniqueKey(),
         future: animation,

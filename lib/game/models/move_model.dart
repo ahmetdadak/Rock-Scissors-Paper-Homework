@@ -37,12 +37,13 @@ class MoveModel {
 
   Image getImage() {
     // TODO: change image paths
-    if (move == Move.Paper) return Image(image: AssetImage('paper.png'));
-    else if (move == Move.Rock) return Image(image: AssetImage('Rock.png'));
-    else return Image(image: AssetImage('Scissors.png'));
+    if (move == Move.Paper) return Image(image: AssetImage('assests/paper--left.png'), height: 120, width: 120,);
+    else if (move == Move.Rock) return Image(image: AssetImage('assests/rock--left.png'), height: 120, width: 120,);
+    else return Image(image: AssetImage('assests/scissors--left.png'), height: 120, width: 120,);
   }
 
   MoveModel getNextMove() {
+
     var moveModel;
     if (move == Move.Paper) moveModel = MoveModel(move: Move.Rock);
     else if (move == Move.Rock) moveModel = MoveModel(move: Move.Scissors);
@@ -50,7 +51,7 @@ class MoveModel {
 
     return moveModel;
   }
-  
+
   MoveModel getPreviousMove() {
     var moveModel;
     if (move == Move.Paper) moveModel = MoveModel(move: Move.Scissors);

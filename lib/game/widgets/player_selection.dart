@@ -28,8 +28,11 @@ class _PlayerSelectionState extends State<PlayerSelection> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         // TODO: Implement Icon button which will call setMove(controller.value.getNextMove())
+        IconButton(icon: Icon(Icons.arrow_upward), onPressed: () => setMove(controller.value.getNextMove()),),
         // TODO: Call controller.value.getImage() which will get the image of the move
+        controller.value.getImage(),
         // TODO: Implement Icon button which will call setMove(controller.value.getPreviousMove())
+        IconButton(icon: Icon(Icons.arrow_downward), onPressed: () => setMove(controller.value.getPreviousMove()),),
       ],
     );
   }

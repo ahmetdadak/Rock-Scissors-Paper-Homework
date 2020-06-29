@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:homework_with_todos/game/widgets/game.dart';
 class GamePage extends StatelessWidget {
   const GamePage({Key key}) : super(key: key);
 
@@ -10,7 +10,7 @@ class GamePage extends StatelessWidget {
         appBar: AppBar(
           title: Text("Rock Scissors Paper"),
         ),
-        body: , //Add Game 
+        body: Game(), //Add Game
       ),
     );
   }
